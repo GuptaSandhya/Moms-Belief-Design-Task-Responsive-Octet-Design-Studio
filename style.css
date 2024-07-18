@@ -1,0 +1,1212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+body {
+    width: 100%;
+    height: 100%;
+    font-family: Inter;
+    font-weight: 400;
+}
+.main {
+    margin-top: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* ......................................................Landing Page styling.................................................. */
+
+.landing-page {
+    background: url("./media/landingpagebg.png");
+    height: calc(100vh);
+    background-clip: border-box;
+    background-size: 100% calc(100vh - 10px);
+    background-repeat: no-repeat;
+}
+
+/* ..............................................Top Bar...............................................................  */
+
+.call-language {
+    width: 100%;
+    height: 4vh;
+    background: #000;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9vw;
+    padding: 0 2vw;
+}
+
+/* .......................................................NavBar............................................................. */
+
+.header {
+    background: rgba(86, 86, 86, 0.05);
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 2vw;
+    justify-content: space-between;
+    font-size: 1.1vw;
+
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo i {
+    font-size: 2vw;
+    font-weight: 800;
+    padding-right: 1vw;
+}
+.logo img {
+    width: 10vw;
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 3vw;
+    align-items: baseline;
+    font-weight: 500;
+}
+.nav a {
+    text-decoration: none;
+    color: #000;
+}
+.nav a sup {
+    vertical-align: super;
+    position: relative;
+    bottom: 0.9em;
+    right: 2.3em;
+    font-size: 0.7vw;
+    border: 1px solid rgba(234, 88, 88, 1);
+    border-radius: 30%;
+    background-color: rgba(234, 88, 88, 1);
+    ;
+}
+.credentials button {
+    /* gap: 10vw; */
+    border-radius: 2vw;
+    width: 6vw;
+    margin-right: 1vw;
+    height: 2.6vw;
+    border: 1px solid rgba(18, 94, 80, 1);
+    font-weight: 550;
+    background: none;
+    color: rgba(18, 94, 80, 1);
+    font-size: 1.1vw;
+}
+.credentials button:nth-child(2) {
+    background-color: rgba(18, 94, 80, 1);
+    color: white;
+}
+
+/* ....................................................Introduction Section.............................................................. */
+
+.main-body {
+    width: 100%;
+    text-align: center;
+    align-content: center;
+    margin: auto;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    width: 44vw;
+    margin: auto;
+    align-content: center;
+}
+.content h2 {
+    font-family: Noto Serif;
+    font-size: 3vw;
+    font-weight: 500;
+    margin-top: 10vh;
+}
+
+.content p {
+    font-weight: 400;
+    width: 35vw;
+    margin: auto;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    font-size: 1.2vw;
+}
+
+.btn {
+    border-radius: 2vw;
+    width: 12vw;
+    height: 2.6vw;
+    border: 1px solid rgba(18, 94, 80, 1);
+    font-weight: 550;
+    background-color: rgba(18, 94, 80, 1);
+    color: white;
+    font-size: 1.1vw;
+    margin: auto;
+}
+
+.content :nth-child(4) {
+    width: 30vw;
+    font-size: 1.1vw;
+    font-weight: 400;
+}
+
+.allimages {
+    position: relative;
+    width: 100%;
+    top: -50vh;
+}
+
+.images {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.vector-left {
+    width: 50%;
+}
+
+.vector-right {
+    position: relative;
+    height: auto;
+    width: 50%;
+    text-align: end;
+    top: 9vh;
+    right: 4vh;
+}
+
+.vector-left img {
+    width: 25vw;
+    height: 26vw;
+}
+
+.vector-right img {
+    width: 17vw;
+    height: 23vw;
+}
+
+.smallimages {
+    text-align: center;
+}
+
+.smallimages :nth-child(1) {
+    position: relative;
+    bottom: 38vh;
+    left: 19vw;
+    transform: scale(0.7);
+}
+
+.smallimages :nth-child(2) {
+    position: relative;
+    bottom: 78vh;
+    right: 31vw;
+}
+
+.smallimages :nth-child(3) {
+    position: relative;
+    bottom: 76vh;
+    left: 37vw;
+}
+
+.smallimages :nth-child(4) {
+    position: relative;
+    bottom: 58.5vh;
+    left: 6.5vw;
+}
+
+
+/* ...................................................First Page Media Queries................................................ */
+
+
+@media(max-width:1275px) {
+    .smallimages {
+        display: none;
+    }
+}
+
+@media(max-width:800px) {
+    .html {
+        padding: 0px;
+    }
+
+    .main {
+        width: 375px;
+        margin: auto;
+    }
+
+    .images,
+    .nav,
+    .credentials,
+    .call-language {
+        display: none;
+    }
+
+    .landing-page {
+        background: url("./media/landingpagebg1.png");
+        background-clip: border-box;
+        background-size: 100% 617px;
+        background-repeat: no-repeat;
+        margin-bottom: 10px;
+        height: 667px;
+    }
+
+    .header {
+        height: 68px;
+    }
+
+    .logo i {
+        padding-left: 20x;
+        font-size: 28px;
+        font-weight: 1000;
+        padding-left: 10px;
+        margin-right: 80px;
+    }
+
+    .logo img {
+        width: 122px;
+        height: 28px;
+    }
+
+    .content {
+        text-align: center;
+        margin: auto;
+        width: 370px;
+        margin: auto;
+        align-content: center;
+        /* height: 86vh; */
+    }
+
+    .content h2 {
+        margin: auto;
+        font-family: Noto Serif;
+        font-size: 25px;
+        font-weight: 500;
+        margin-top: 50px;
+        width: 270px;
+        height: 110px;
+    }
+
+    .content p {
+        font-weight: 400;
+        width: 324px;
+        height: 75px;
+        /* line-height: 25px; */
+        margin: auto;
+        margin-top: 16px;
+        margin-bottom: 30px;
+        font-size: 16px;
+    }
+
+    .btn {
+        font-family: Inter;
+        border-radius: 60px;
+        width: 165px;
+        height: 36px;
+        border: 1px solid rgba(18, 94, 80, 1);
+        font-weight: 600;
+        background-color: rgba(18, 94, 80, 1);
+        color: white;
+        font-size: 15px;
+        margin: auto;
+        padding: 6px 15px 6px 15px;
+        margin-bottom: 19px;
+    }
+
+    .content :nth-child(4) {
+        width: 230px;
+        height: 69px;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .allimages {
+        position: relative;
+        width: 100%;
+        top: -70px;
+    }
+
+    .navphone {
+        height: 70px;
+        background-color: #000;
+        position: relative;
+        bottom: 17px;
+        border-radius: 20px 20px 0 0;
+        color: white;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .navphone div {
+        text-align: center;
+    }
+
+    .navphone p {
+        font-size: 12px;
+    }
+
+    .images1 :nth-child(2) {
+        position: relative;
+        left: 120px;
+        bottom: 270px;
+    }
+
+    .images1 :nth-child(3) {
+        position: relative;
+        left: 0px;
+        bottom: 395px;
+    }
+
+    .images1 :nth-child(4) {
+        position: relative;
+        right: 5px;
+    }
+
+}
+
+@media(min-width:800px) {
+
+    .images1,
+    .navphone {
+        display: none;
+    }
+}
+
+
+/* .................................................Secong Page Styling.......................................................... */
+
+.programs {
+    background-image: url("./media/programsbg.png");
+    height: calc(113vh);
+    background-clip: border-box;
+    background-size: 95vw 113vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 10vh;
+    padding: 1vw;
+}
+.programscontent {
+    text-align: center;
+}
+
+.programs h2 {
+    font-size: 2.4vw;
+    font-weight: 500;
+    font-family: Noto serif;
+    /* position: relative; */
+    margin-top: 15vh;
+    text-align: center;
+}
+
+.programscontent :nth-child(2) {
+    position: relative;
+    left: 7vw;
+    bottom: 1vh;
+}
+
+.programscontent p {
+    font-size: 1.2vw;
+    text-align: center;
+    width: 48vw;
+    margin: auto;
+    margin: 2vh auto 5vh auto;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-evenly;
+    /* flex-wrap: row wrap; */
+    width: 95vw;
+    margin-top: 5vh;
+}
+
+.in-card {
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    align-items: center;
+    text-align: center;
+}
+
+.in-card img {
+    border: 10px solid;
+    /* padding: 10px; */
+    border-image: url("./media/border.png") 10 stretch;
+    width: 20vw;
+    height: 20vw;
+
+}
+
+.cardcontent {
+    font-size: 1.07vw;
+    text-align: left;
+
+}
+
+.card-title {
+    font-size: 1.33vw;
+    font-weight: 600;
+    margin-top: 5vh;
+}
+
+.in-card p {
+    margin-top: 2vh;
+    width: 20vw;
+}
+
+.in-card a {
+    margin-top: 3vh;
+    display: flex;
+    font-size: 1.07vw;
+    font-weight: 400;
+    text-decoration: none;
+    color: rgba(234, 88, 88, 1);
+}
+
+
+/* .................................................Second Page Media Queries.................................................. */
+
+@media (min-width:800px) {
+    #hr {
+        display: none;
+    }
+}
+
+@media (max-width:800px) {
+
+    .programs {
+        background-image: url("./media/programsbg1.png");
+        background-size: 345px 1377px;
+        background-repeat: no-repeat;
+        position: relative;
+        height: 1377px;
+        margin-top: 30px;
+    }
+
+    .programscontent p {
+        display: none;
+    }
+
+    .programs h2 {
+        font-size: 20px;
+        width: 360px;
+        font-weight: 500;
+        font-family: Noto serif;
+        text-align: center;
+    }
+
+    .programscontent :nth-child(2) {
+        position: relative;
+        left: 105px;
+        bottom: 38px;
+    }
+
+    .cards {
+        display: block;
+        width: 360px;
+    }
+
+    .in-card {
+        margin: auto;
+        width: 272px;
+        height: 380px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .in-card img {
+        height: 169.98px;
+        width: 169.98px;
+    }
+
+    .cardcontent {
+        text-align: center;
+    }
+
+    .card-title {
+        font-size: 15px;
+        font-weight: 600;
+        margin-top: 1vh;
+    }
+
+    .in-card p {
+        font-size: 14px;
+        margin-top: 2vh;
+        width: 100%;
+    }
+
+    .in-card a {
+        margin-top: 3vh;
+        font-size: 15px;
+        font-weight: 400;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+    }
+
+    hr {
+        color: rgba(234, 88, 88, 1);
+        width: 146px;
+        margin: auto;
+    }
+
+}
+
+/* .................................................Third Page Styling.................................................... */
+
+.howdowework {
+    margin-top: 15vh;
+    text-align: center;
+}
+
+.infocontent {
+    text-align: center;
+    margin-top: 0;
+}
+
+.infocontent h2 {
+    font-size: 2.4vw;
+    font-weight: 500;
+    font-family: Noto serif;
+}
+
+.infocontent p {
+    font-size: 1.2vw;
+    text-align: center;
+    width: 45vw;
+    margin: auto;
+    margin: 2vh auto 2vh auto;
+}
+
+.infoimage {
+    width: 90vw;
+    height: 39.35vw;
+    margin: auto;
+}
+
+/*........................................................... Third Page Media Queries .........................................*/
+
+@media (min-width:800px) {
+    .infoimage1 {
+        display: none;
+    }
+
+    .infocontent :nth-child(2) {
+        display: none;
+    }
+}
+
+@media (max-width:800px) {
+    .infoimage {
+        display: none;
+    }
+
+    .infocontent :nth-child(1) {
+        display: none;
+    }
+
+    .infocontent h2 {
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    .infocontent p {
+        margin-top: 20px;
+        font-size: 16px;
+        width: 280px;
+        height: 125px;
+    }
+
+    .infoimage1 {
+        width: 350px;
+        height: 964px;
+    }
+}
+
+/* ...........................................Fourth Page Styling..................................................................... */
+
+.contact {
+    background-image: url("./media/contactbg.png");
+    height: calc(99vh);
+    background-clip: border-box;
+    background-size: 95vw 99vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 1vw;
+    margin: auto;
+    margin-top: 12vh;
+}
+
+.contactcontent h2 {
+    margin: auto;
+    margin-top: 7vh;
+    width: 25vw;
+    font-size: 2.4vw;
+    font-weight: 500;
+    font-family: Noto serif;
+    text-align: center;
+}
+
+.contactcontent p {
+    font-size: 1.2vw;
+    text-align: center;
+    width: 40vw;
+    margin: 4vh auto 5vh auto;
+}
+
+.details {
+    background-color: white;
+    height: 54vh;
+    width: 75vw;
+    border-radius: 15px;
+    margin: auto;
+    padding: 3vw;
+}
+
+.details h4 {
+    font-size: 1.33vw;
+    font-weight: 600;
+    margin: 0 auto 5vh auto;
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 40vh;
+}
+
+.form1 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9vw;
+    padding: 0.3vw;
+}
+
+.input {
+    width: 22vw;
+    height: 6vh;
+    border: 1px solid grey;
+    border-radius: 4px;
+
+}
+
+.input1 {
+    width: 45vw;
+    height: 6vh;
+    border: 1px solid grey;
+    border-radius: 4px;
+}
+
+.form1 span {
+    display: block;
+}
+
+.submitbutton {
+    margin: auto;
+    text-align: center;
+}
+
+.submitbutton button {
+    border-radius: 2vw;
+    width: 15vw;
+    height: 3vw;
+    border: 1px solid rgba(18, 94, 80, 1);
+    font-weight: 550;
+    background-color: rgba(18, 94, 80, 1);
+    font-size: 1.5vw;
+    color: white;
+}
+
+.submitbutton p {
+    font-size: 1.5vw;
+    font-weight: 400;
+    color: rgba(78, 81, 108, 1);
+}
+
+ 
+/*................................................Fourth Page Media Queries................................................... */
+
+
+@media (max-width:800px) {
+    .contact {
+        background-image: url("./media/contactbg1.png");
+        background-size: 341px 857px;
+        height: 857px;
+        background-repeat: no-repeat;
+        position: relative;
+        margin-top: 30px;
+    }
+
+    .contactcontent h2 {
+        margin: auto;
+        margin-top: 50px;
+        width: 209px;
+        font-size: 20px;
+        font-weight: 500;
+        font-family: Noto serif;
+        text-align: center;
+    }
+
+    .contactcontent p {
+        font-size: 16px;
+        width: 260px;
+        height: 88px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .details {
+        background-color: transparent;
+        height: 395px;
+        width: 351px;
+        margin: auto;
+    }
+
+    .details h4 {
+        font-size: 18px;
+        font-weight: 600;
+        width: 209px;
+        height: 54px;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    .form {
+        height: 530px;
+        width: 320px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+
+    }
+
+    .form1 {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        height: 240px;
+        justify-content: space-evenly;
+    }
+
+    .form2 {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        height: 155px;
+        justify-content: space-evenly;
+        position: relative;
+        bottom: 20px;
+    }
+
+    .form p {
+        font-size: 13px;
+    }
+
+    .form span {
+        display: block;
+    }
+
+    .input,
+    .input1 {
+        width: 300px;
+        height: 30px;
+        border: 1px solid grey;
+        border-radius: 4px;
+    }
+
+    .submitbutton {
+        margin: auto;
+        text-align: center;
+    }
+
+    .submitbutton button {
+        border-radius: 20px;
+        width: 174px;
+        height: 44px;
+        border: 1px solid rgba(18, 94, 80, 1);
+        font-weight: 550;
+        background-color: rgba(18, 94, 80, 1);
+        font-size: 16px;
+        color: white;
+        margin-bottom: 10px;
+    }
+
+    .submitbutton p {
+        font-size: 14px;
+        font-weight: 400;
+        color: rgba(78, 81, 108, 1);
+        width: 189px
+    }
+}
+
+/*............................................... Fifth Page Styling............................................ */
+
+.frame-761 {
+    height: 714px;
+    width: 1073px;
+    margin: 100px auto;
+}
+
+.frame-760 {
+    height: 586px;
+    width: 1073px;
+    align-items: center;
+}
+
+.frame-666 {
+    height: 130px;
+    width: 680px;
+    margin: auto;
+    align-items: center;
+}
+
+.frame-666 h3 {
+    font-size: 32px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.frame-666 p {
+    width: 630px;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    color: rgba(78, 81, 108, 1);
+}
+
+.frame-759 {
+    height: 396px;
+    width: 1073px;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.frame-688 {
+    height: 128px;
+    width: 1071px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.frame-667 {
+    height: 128px;
+    width: 270px;
+    background: rgba(255, 204, 0, 1);
+    text-align: center;
+    padding: 25px;
+}
+
+.frame-667 h3 {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.frame-667 p {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.frame-668 {
+    height: 115px;
+    width: 250px;
+    margin: auto;
+    background: rgba(255, 249, 225, 1);
+    padding: 20px;
+    text-align: center;
+}
+
+.frame-668 h3 {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.frame-668 p {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.frame-669 {
+    height: 115px;
+    width: 250px;
+    margin: auto;
+    background: rgba(255, 249, 225, 1);
+    padding: 25px;
+    text-align: center;
+}
+
+.frame-669 h3 {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.frame-669 p {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.frame-670 {
+    height: 115px;
+    width: 250px;
+    margin: auto;
+    background: rgba(255, 249, 225, 1);
+    padding: 25px;
+    text-align: center;
+}
+
+.frame-670 h3 {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.frame-670 p {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.frame-706 {
+    width: 1073px;
+    height: 268px;
+    border: 1px solid rgba(255, 204, 0, 1);
+    padding: 20px;
+    align-content: space-evenly;
+    line-height: 60px;
+}
+
+.frame-706 h5 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.features {
+    display: flex;
+    justify-content: space-between;
+}
+
+.list {
+    font-size: 16px;
+    font-weight: 400;
+    list-style: disc;
+    width: 1000px;
+}
+
+.frame-690 {
+    width: 171px;
+    height: 78px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.frame-690 button {
+    background: rgba(18, 93, 80, 1);
+    color: rgba(255, 255, 255, 1);
+    border-radius: 25px;
+    border: 0px;
+    width: 145px;
+    height: 44px;
+    margin-top: 12px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.frame-690 p {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(78, 81, 108, 1);
+}
+
+/* ........................................Fifth Page Media Queries ......................................*/
+
+
+@media(max-width: 800px){
+    .frame-761{
+        display: none;
+    }
+}
+
+
+/* ....................................................Footer Page Styling................................................ */
+
+.footer {
+    height: 488.5px;
+    background-image: url("Rectangle 86.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 95vw;
+    align-content: center;
+}
+
+.group-262 {
+    height: 390px;
+    display: flex;
+    padding: 60px 80px 0px 80px;
+    margin: auto;
+}
+
+.div-col-1 {
+    width: 393px;
+    height: 330px;
+    margin: auto;
+    margin-right: 0px;
+}
+
+.div-col-1 :nth-child(1) {
+    width: 155px;
+    height: 36px;
+}
+
+.div-col-1 h5 {
+    margin-top: 45px;
+    font-size: 20px;
+    font-weight: 600;
+    color: rgba(21, 27, 74, 1);
+}
+
+.div-col-1 p {
+    margin-top: 45px;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(78, 81, 108, 1);
+    width: 350px;
+}
+
+.icons {
+    width: 94.37px;
+    height: 23px;
+    text-decoration: none;
+}
+
+.group-261 {
+    width: 420px;
+    height: 276px;
+    display: flex;
+    justify-content: space-between;
+    line-height: 38px;
+    margin: auto;
+    margin-left: 0px;
+}
+
+.group-261 a {
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    color: rgba(78, 81, 108, 1);
+}
+
+.group-367 {
+    top: 657vh;
+    right: 5vw;
+    position: absolute;
+}
+
+.footerbottom {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(78, 81, 108, 1);
+}
+
+/* .................................................................Footer Page Media Queries ................................................*/
+
+
+@media (min-width:800px){
+
+   .companyresources{
+    display: none;
+   }
+   .footerimage1{
+    display: none;
+   }
+}
+@media (max-width:800px) {
+    .group-262 {
+        height: 390px;
+        padding: 0px;
+    }
+    .footer {
+        background-image: url("./media/footerbg1.png");
+        background-size: 345px 420px;
+        height: 420px;
+        background-repeat: no-repeat;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        text-align: center;
+        margin-top: 30px;
+
+    }
+     .group-261{
+        display: none;
+    }
+    .div-col-1{
+        width: 370px;
+        margin: auto;
+        text-align: center;
+        position: relative;
+        top: 30px;
+    }
+    .div-col-1 h5 {
+        margin-top: 20px;
+        font-size: 16px;
+        font-weight: 600;
+        color: rgba(21, 27, 74, 1);
+    }
+    
+    .div-col-1 p {
+        width: 293px;
+        font-size: 13px;
+        font-weight: 400;
+        color: rgba(78, 81, 108, 1);
+        margin: auto;
+        margin-top: 20px;
+        line-height: 24px;
+
+    }
+    .div-col-1 :nth-child(1){
+        width: 104px;
+        height: 24px;
+    }
+    .icons{
+        margin: auto;
+        margin-top: 10px;
+    }
+    .companyresources{
+        display: flex;
+        justify-content: space-between;
+        width: 250px;
+        margin: auto;
+        margin-top: 15px;
+        font-size: 15px;
+        font-weight: 600;
+    }
+    .footerbottom {
+        font-size: 9px;
+        margin-bottom: 15px;
+    }
+    .group-367 {
+        display: none;
+    }
+    .footerimage1{
+        width: 55.81px;
+        height: 47.5px;
+        position: relative;
+        left: 300px;
+    }
+}
+
+/*------------------*/
